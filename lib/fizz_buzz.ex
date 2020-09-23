@@ -6,9 +6,11 @@ defmodule FizzBuzz do
   end
 
   defp handle_file_read({:ok, result}) do
-    list = result
-    |> String.split(",")
-    |> Enum.map(&convert_and_evaluate_numbers/1)
+    list =
+      result
+      |> String.split(",")
+      |> Enum.map(&convert_and_evaluate_numbers/1)
+
     {:ok, list}
   end
 
